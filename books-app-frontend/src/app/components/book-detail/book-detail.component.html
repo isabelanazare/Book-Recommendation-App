@@ -1,0 +1,14 @@
+<div class="book-details-box">
+    <ul>
+        <li>
+            <h2>{{book.title}} </h2>
+        </li>
+        <li> {{book.authors}}</li>
+        <li> Category: {{book.categories}}</li>
+        <li> Number of pages: {{book.pageCount}}</li>
+        <li> <a href="{{book.previewLink}}" *ngIf="book.previewLink">Preview</a> </li>
+        <li><a href="{{book.infoLink}}" *ngIf="book.infoLink">More info</a></li>
+        <li *ngIf="book.description"> Description:</li>
+        <div class="description" *ngIf="book.description"> {{book.description}}</div>
+    </ul>
+</div>

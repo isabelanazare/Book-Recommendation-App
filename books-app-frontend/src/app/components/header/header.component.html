@@ -1,0 +1,12 @@
+<div class="header-content">
+    <div id="book-logo">
+        <a routerLink="/main/books">
+            <img src="../../../assets/images/book.png">
+        </a>
+    </div>
+    <div id="app-title">bookworm.com</div>
+    <div id="username" *ngIf="user">Hi, {{user.username}}</div>
+    <div id="log-out-button">
+        <button (click)="logOut()" type="button" class="btn btn-primary" *ngIf="user">Log out</button>
+    </div>
+</div>

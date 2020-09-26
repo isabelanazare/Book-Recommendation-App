@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="main-container">
+    <div class="content-area">
+        <div id="login-title"> Login </div>
+        <div class="login-container">
+            <form [formGroup]="getCheckoutForm()" (ngSubmit)="login()">
+
+                <div class="form-label"> Email:</div>
+                <input class="form-control" placeholder="email" type="text" formControlName="email">
+
+                <div class="form-label"> Password:</div>
+                <input class="form-control" placeholder="password" type="password" formControlName="password">
+
+                <div class="form-buttons">
+                    <div class="top-buttons">
+                        <button type="submit" class="btn btn-primary" id="enter-button">enter</button>
+                        <button type="text" class="btn btn-primary" id="register-button"> <a
+                                routerLink="/register">register</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

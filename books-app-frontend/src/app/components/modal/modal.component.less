@@ -1,0 +1,97 @@
+/* MODAL STYLES
+-------------------------------*/
+jw-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .jw-modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* z-index must be higher than .jw-modal-background */
+        z-index: 1000;
+        
+        /* enables scrolling for tall modals */
+        overflow: auto;
+
+        .jw-modal-body {
+            padding: 20px;
+            background: #fff;
+            width:600px;
+
+            /* margin exposes part of the modal background */
+            margin:auto;
+            margin-top:120px;
+        }
+    }
+
+    .jw-modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+
+        /* z-index must be below .jw-modal and above everything else  */
+        z-index: 900;
+    }
+}
+
+body.jw-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+.jw-modal .jw-modal-body button{
+    margin-right:20px;
+    margin-top:-20px; 
+    width:100px;
+    height:30px;
+    color:white;
+    font-family:'Open Sans';
+}
+
+  #saveButton {
+    background-color:#028F1F;
+  }
+  
+  #closeButton {
+    background-color: #E20000;
+  }
+  
+  #modal-title{
+      font-size: 17px;      
+      font-weight: bold;
+      font-family:'Open Sans';
+      padding-bottom:15px;
+      margin-bottom:15px;
+      border-bottom: 1px solid darkgray;
+  }
+
+  input {
+      width: 95%;
+      height:25px;
+      margin-top:7px;
+      margin-bottom:17px;
+      border:1px solid lightgray;
+  }
+
+  form{
+    font-family:'Open Sans';
+  }
+
+  .form-buttons {
+      display:flex;
+      padding-top:34px;
+      justify-content: flex-end;
+      border-top: 1px solid darkgray;
+  }

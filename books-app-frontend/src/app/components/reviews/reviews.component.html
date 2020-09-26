@@ -1,0 +1,84 @@
+<div class="reviews-header">
+  <span>Reviews</span>
+  <div class="buttons-container">
+    <button (click)="openModal('add-review-modal')" id="addButton">Add</button>
+    <button (click)="openModal('edit-review-modal')" id="editButton">Edit</button>
+  </div>
+</div>
+
+<app-review-detail [review]="selectedReview"></app-review-detail>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+        </tr>
+      </thead>
+      <tbody *ngFor="let review of reviews | paginate:{itemsPerPage: 5, currentPage:p}"
+        [class.selected]="review === selectedReview" (click)="onSelect(review)">
+        <tr>
+          <td>
+
+            <div class="reviews-row">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{review.book_title}}</h5>
+                  <p class="card-text">{{review.book_authors}}</p>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="pagination">
+      <pagination-controls (pageChange)="p=$event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<jw-modal id="add-review-modal">
+  <div id="modal-title"> Add Review</div>
+  <form [formGroup]="getCheckoutForm()" (ngSubmit)="addReview(getCheckoutForm().value)">
+    Book title:
+    <input type="text" formControlName="book_title">
+
+    Authors:
+    <input type="text" formControlName="book_authors">
+
+    Rating:
+    <input type="text" formControlName="rating">
+
+    Description:
+    <input type="text" formControlName="description">
+
+    <div class="form-buttons">
+      <button type="submit" id="saveButton">Save</button>
+      <button (click)="closeModal('add-review-modal');" id="closeButton" type="button">Close</button>
+    </div>
+  </form>
+</jw-modal>
+
+<jw-modal id="edit-review-modal">
+  <div id="modal-title"> Edit Review</div>
+  <form [formGroup]="getCheckoutForm()" (ngSubmit)="editReview(getCheckoutForm().value)">
+    Book title:
+    <input type="text" formControlName="book_title">
+
+    Authors:
+    <input type="text" formControlName="book_authors">
+
+    Rating:
+    <input type="text" formControlName="rating">
+
+    Description:
+    <input type="text" formControlName="description">
+
+    <div class="form-buttons">
+      <button type="submit" id="saveButton">Save</button>
+      <button (click)="closeModal('edit-review-modal');" id="closeButton" type="button">Close</button>
+    </div>
+  </form>
+</jw-modal>

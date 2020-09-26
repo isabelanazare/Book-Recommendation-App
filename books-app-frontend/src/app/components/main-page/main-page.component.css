@@ -1,0 +1,17 @@
+.main-container {
+    display:flex;
+    height:1450px;
+}
+
+.main-content-area{
+    background-color:#EFEFEF;
+    width:81%;
+    height:1450px;
+}
+
+.main-content {
+    width:96.5%;
+    margin-left:2%;
+    height:1450px;
+    background-color:white;
+}

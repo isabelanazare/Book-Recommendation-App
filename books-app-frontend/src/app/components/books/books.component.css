@@ -1,0 +1,18 @@
+img {
+    width: 100px;
+    height: 150px;
+    margin: auto;
+}
+
+.card-img-top {
+    border-color: white;
+}
+
+.books-row {
+    display: flex;
+}
+
+
+a {
+    color: white;
+}

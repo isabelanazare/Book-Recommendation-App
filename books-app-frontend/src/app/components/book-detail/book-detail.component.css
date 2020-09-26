@@ -1,0 +1,42 @@
+.book-details-box {
+    font-family: 'Open Sans';
+    font-size:20px;
+    width:94%;
+    margin: auto;
+    border: 1px solid lightgray;
+    padding-top:20px;
+    height:100%;
+    margin-left:40px;
+}
+
+li {
+    width:100%;
+    margin-left:20px;
+}
+
+.description {
+    font-size:17px;
+    font-family: "Open Sans";
+    line-height: 1.6;
+    margin-left:8px;
+}
+
+a {
+    margin-left:7px;
+}
+
+li {
+    margin:10px;
+    margin-bottom:30px;
+}
+
+#description-label {
+    margin-left:-30px;
+}
+
+img {
+    width:100px;
+    height:100px;
+    margin-left:600;
+    margin-top:-230px;
+}

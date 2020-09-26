@@ -1,0 +1,13 @@
+<div class="review-detail-container" *ngIf="review">
+    <h2>{{ review.book_title }} by {{ review.book_authors }}</h2>
+    <div>
+        <p>Rating:
+            {{ review.rating }}
+        </p>
+        <p>Description:
+            {{ review.description }}
+        </p>
+    </div>
+    <button type="button" class="btn btn-danger" (click)="delete(review)">Delete</button>
+    <br>
+</div>

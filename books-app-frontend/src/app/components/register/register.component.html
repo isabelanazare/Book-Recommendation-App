@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="main-container">
+    <div class="content-area">
+
+        <div id="register-title"> Register </div>
+        <div class="register-container">
+            <form [formGroup]="getCheckoutForm()" (ngSubmit)="onCreate()">
+                <div class="form-label">Username:</div>
+                <input type="form-control" class="form-control" placeholder="Username" type="text"
+                    formControlName="username">
+
+                <div class="form-label"> Email:</div>
+                <input class="form-control" placeholder="Email" type="text" formControlName="email">
+
+                <div class="form-label"> Password:</div>
+                <input class="form-control" type="password" placeholder="Password" formControlName="password">
+
+                <div class="form-label"> Confirm password:</div>
+                <input class="form-control" type="password" placeholder="Password" formControlName="confirmedPassword">
+
+                <div class="form-buttons">
+                    <div class="top-buttons">
+
+                        <button type="submit" class="btn btn-primary" id="create-button">Create</button>
+                        <button type="button" class="btn btn-primary" id="go-back-button"><a routerLink="/"> Go
+                                back</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    font-family: Arial;
+  }
+  
+button .delete {
+    position: relative;
+    left: 194px;
+    top: -32px;
+    background-color: gray !important;
+    color: white;
+  }
+  
+.reviews-header {
+    height:50px;
+    border-bottom:1px solid gray;
+  }
+  
+.reviews-header span{
+      position:relative;
+      top:15px;
+      margin-left:15px;
+      font-family:'Open Sans';
+      font-size:20px;
+  }
+  
+.reviews-header .buttons-container {
+    display:flex;
+    justify-content: flex-end;  
+  }
+  
+.reviews-header .buttons-container button{
+    margin-right:20px;
+    margin-top:-20px; 
+    width:100px;
+    height:30px;
+    color:white;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  
+.buttons-container {
+    margin-top:8px;
+  }
+
+#addButton {
+    background-color:#028F1F;
+  }
+  
+#editButton {
+    background-color:  #2EACFF;
+  }
+  

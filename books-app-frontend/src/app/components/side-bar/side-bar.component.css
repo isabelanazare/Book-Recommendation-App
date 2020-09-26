@@ -1,0 +1,26 @@
+.nav-row {
+    background-color:#75A7FC;
+    height:63px;
+    border-bottom: 1px solid white;
+    width: 300px;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    padding-top:11px;
+    padding-left:12px;
+}
+
+.nav-row a {
+    color: white;
+    text-decoration:none;
+}
+
+.sidenav-menu {
+    background-color:#06579E;
+    height:1450px;
+}
+
+.sidenav-menu :hover {
+    background-color:#A7C7FE;
+}
+
