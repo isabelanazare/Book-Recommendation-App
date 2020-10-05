@@ -33,7 +33,7 @@ export class BookDetailComponent implements OnInit {
   getDetails(book) {
     let q = book.title + "+inauthor:" + book.authors;
     const url = "https://www.googleapis.com/books/v1/volumes?q=" + q
-      + "&key=AIzaSyAz7lWfkwPrTnzf0bCU7v8l_GgSvqpsRAc";
+      + "&key=GOOGLE_KEY";
 
     this.bookService.getBookDetails(url).subscribe((res) => {
       book.description = res.items[0].volumeInfo.description;
